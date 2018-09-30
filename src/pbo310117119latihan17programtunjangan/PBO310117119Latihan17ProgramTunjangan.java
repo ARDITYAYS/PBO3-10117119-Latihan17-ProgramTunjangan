@@ -23,25 +23,29 @@ public class PBO310117119Latihan17ProgramTunjangan {
     public static void main(String[] args) {
         // TODO code application logic here
         double gajipokok, tunjangan, totalgaji;
-        String status = "Menikah";
+        String status;
 
-        gajipokok = 6000000;
+        
+        
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("==========Program Tunjangan===========");
-        System.out.println("Berapa gaji pokok anda perbulan?\t: Rp. "
-                + gajipokok);
+        System.out.print("Berapa gaji pokok anda perbulan?\t: Rp. ");
+        gajipokok = scanner.nextInt();
         System.out.print("Status Anda? (Menikah/Belum) \t: ");
-
+        
+        
+        status = scanner.next();
+        
         if ("Menikah".equals(status)) {
             tunjangan = 0.35 * gajipokok;
             totalgaji = gajipokok + tunjangan;
         } else {
             tunjangan = 0 * gajipokok;
             totalgaji = gajipokok + tunjangan;
-
+            
         }
-        status = scanner.next();
+        
         System.out.println("==========Hasil Perhitungan Gaji Anda===========");
         System.out.println("Gaji Pokok\t: " + gajipokok);
         System.out.println("Tunjangan\t:" + tunjangan);
